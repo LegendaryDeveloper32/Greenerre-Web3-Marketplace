@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
-import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router";
 import Card from "../components/base/Card";
 import "../styles/NFTDetail.css";
