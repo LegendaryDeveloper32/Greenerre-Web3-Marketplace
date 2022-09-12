@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 
 import Header from "../components/Header";
-import { useEthers, useEtherBalance } from "@usedapp/core";
+import { useEthers } from "@usedapp/core";
 
 const Create = () => {
-  const { activateBrowserWallet, account } = useEthers();
+  const { activateBrowserWallet } = useEthers();
 
   useEffect(() => {
     activateBrowserWallet();
-  }, []);
+  });
 
   return (
     <>

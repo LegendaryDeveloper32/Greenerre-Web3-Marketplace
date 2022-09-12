@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createRef } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router";
@@ -24,8 +24,6 @@ const NFTDetail = () => {
   const getColors = (colors) => {
     setColors((c) => [...c, ...colors]);
   };
-
-  const navigate = useNavigate();
 
   const { state } = useLocation();
 
@@ -66,11 +64,7 @@ const NFTDetail = () => {
                 <>
                   {" "}
                   <ColorExtractor getColors={getColors}>
-                    <img
-                      id="detail-image"
-                      alt="detail image"
-                      src={state.item.src}
-                    />
+                    <img id="detail-image" alt="detail" src={state.item.src} />
                   </ColorExtractor>
                 </>
               )}
